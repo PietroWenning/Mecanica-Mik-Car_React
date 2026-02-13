@@ -1,13 +1,15 @@
-import Header from './components/Header';
+
 import Home from './pages/Home';
+import Cta from './pages/Cta';
 import './assets/css/style.css';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Home />
-    </>
+   <>
+   <Home/>
+   <Cta />
+   </>
+   
   );
 }
 

@@ -1,16 +1,23 @@
+import img1 from '../assets/images/Logomarca/logomarca.png'
+import img2  from '../assets/images/Outras/wallpaper005.jpg'
+
+
 function Home() {
   return (
     <main>
-       <div class="interface">
+      <div className="fundo">
+<img src={img2} alt="Fundo" />
+      </div>
+       <div className="interface">
    
-    <div class="logomarca">
+    <div className="logomarca">
       <a href="#">
-        <img src="../../s" alt="" />
+        <img src={img1} alt="Mikcar" />
       </a>
     </div>
 
 
-    <nav class="menu-desktop">
+    <nav className="menu-desktop">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#servicos">Serviços</a></li>
@@ -31,8 +38,8 @@ function Home() {
   </div>
 
 
-  <div class="menu-mobile" id="menu-mobile">
-    <div class="btn-fechar"><i class="bi bi-x-lg"></i></div>
+  <div className="menu-mobile" id="menu-mobile">
+    <div className="btn-fechar"><i class="bi bi-x-lg"></i></div>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -45,9 +52,9 @@ function Home() {
   </div>
 
 
-  <div class="overlay-menu"></div>
-  <ul class="example-2">
-  <li class="icon-content">
+  <div className="overlay-menu"></div>
+  <ul className="example-2">
+  <li className="icon-content">
     <a
       data-social="whatsapp"
       aria-label="Whatsapp"
@@ -69,9 +76,9 @@ function Home() {
         ></path>
       </svg>
     </a>
-    <div class="tooltip">Whatsapp</div>
+    <div className="tooltip">Whatsapp</div>
   </li>
-  <li class="icon-content">
+  <li className="icon-content">
     <a
       data-social="facebook"
       aria-label="Facebook"
@@ -93,15 +100,15 @@ function Home() {
         ></path>
       </svg>
     </a>
-    <div class="tooltip">Facebook</div>
+    <div className="tooltip">Facebook</div>
   </li>
-  <li class="icon-content">
+  <li className="icon-content">
     <a
       data-social="instagram"
       aria-label="Instagram"
       href="https://www.instagram.com/mikcar_floripa/" target="_blank"
     >
-      <div class="filled"></div>
+      <div className="filled"></div>
       <svg
         xml:space="preserve"
         viewBox="0 0 16 16"
@@ -117,7 +124,7 @@ function Home() {
         ></path>
       </svg>
     </a>
-    <div class="tooltip">Instagram</div>
+    <div className="tooltip">Instagram</div>
   </li>
 </ul>
     </main>

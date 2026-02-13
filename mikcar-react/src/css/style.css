@@ -141,9 +141,12 @@ body{
 }
 /*Cabeçalho*/
 /* Interface do header */
-header{
-   background: url('../../Imagens/Outras/wallpaper005.jpg') no-repeat center/cover;
+header {
+  background: url('../../images/Outras/wallpaper005.jpg') no-repeat center/cover;
+  min-height: 100vh
+
 }
+
 header .interface {
   display: flex;
   align-items: center;
@@ -223,7 +226,6 @@ nav.menu-desktop a:hover::after {
 .btn-contato-link:hover {
   box-shadow: 1px 1px 1px 1px #15D366; transform: scale(1.1); font-weight: bold; text-decoration: none;
 }
-
 /* Menu Mobile */
 #btn-menu {
   display: none;
@@ -528,8 +530,8 @@ position: fixed;
   position: absolute;
   color: white;
   top: 10%;
-  left: 25%;
-  padding-right:100px ;
+ 
+  
   z-index: 2;
   font-family: 'Poppins', sans-serif;
   text-align: center;
