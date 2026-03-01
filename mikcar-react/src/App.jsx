@@ -1,13 +1,12 @@
-
-import Home from './pages/Home';
-import Cta from './pages/Cta';
-import './assets/css/style.css';
+import Navbar from './components/NavBar/Navbar.jsx';
+import Home from './pages/Home/Home.jsx';
+import './css/global.css';
 
 function App() {
   return (
    <>
    <Home/>
-   <Cta />
+   <Navbar/>
    </>
    
   );

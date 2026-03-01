@@ -1,0 +1,269 @@
+.interface{
+  max-width: 1280px;
+  margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+  
+}
+/*Cabeçalho*/
+/* Interface do header */
+header {
+  background: url('../../images/Outras/wallpaper005.jpg') no-repeat center/cover;
+  min-height: 100vh
+
+}
+
+header .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 4%;
+  position: relative;
+  
+  color: white;
+  height: 200px;
+}
+
+/* Logo */
+.logomarca img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Menu Desktop */
+nav.menu-desktop ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav.menu-desktop a {
+  text-decoration: none;
+  color: var(--cortexto);
+  font-size: 16px;
+  position: relative;
+}
+
+nav.menu-desktop a::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background: var(--corprincipal);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+nav.menu-desktop a:hover::after {
+  width: 100%;
+}
+
+/* Botão contato */
+.btn-contato-link {
+    background-image: linear-gradient(to right, #25D366,#22b458);
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+     border-radius: 40px;
+    font-weight: bold;
+     border: none;
+    cursor: pointer;
+     transition: 0.3s;
+    color: white; text-decoration: none;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+@keyframes pulse512 {
+  0% { 
+    box-shadow: 0 0 0 0 #08a3039c; 
+  }
+ 70% {
+   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%); 
+  }
+ 
+ 100% {
+   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+   } 
+}
+
+.btn-contato-link:hover {
+  box-shadow: 1px 1px 1px 1px #15D366; transform: scale(1.1); font-weight: bold; text-decoration: none;
+}
+/* Menu Mobile */
+#btn-menu {
+  display: none;
+  font-size: 30px;
+  color: var(--corprincipal);
+  cursor: pointer;
+}
+
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background-color: #1a1a1a;
+  overflow: hidden;
+  transition: width 0.3s;
+  z-index: 9999;
+}
+
+.menu-mobile.abrir-menu {
+  width: 70%;
+}
+
+.menu-mobile nav ul {
+  list-style: none;
+  padding: 50px 20px;
+}
+
+.menu-mobile nav ul li a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.menu-mobile nav ul li a:hover {
+  background-color: #c62828;
+  color: #000;
+}
+
+.menu-mobile .btn-fechar {
+  padding: 10px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.menu-mobile .btn-fechar i {
+  font-size: 30px;
+  color: #c62828;
+}
+
+/* Overlay */
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  z-index: 9998;
+}
+
+/* Responsivo */
+@media (max-width: 1020px) {
+  nav.menu-desktop {
+    display: none;
+  }
+  #btn-menu {
+    display: block;
+  }
+}
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+ flex-direction: column;
+  align-items: center;
+z-index:888;
+position: fixed;
+  bottom: 30px;
+  gap: 10px;
+  right:40px;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+  background-color: #128c7e;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #3b5998;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}

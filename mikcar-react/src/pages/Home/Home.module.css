@@ -1,0 +1,217 @@
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+ position: relative;
+  margin: 0 auto;
+}
+
+.slides{
+ 
+  width: 400%;
+  height: 670px;
+  display: flex;
+}
+.slides input
+{
+  display: none;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, #000000e8);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.726));
+  z-index: 1;
+  pointer-events: none;
+}
+.slide {
+
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.manual-navigation {
+  position: absolute;
+  bottom: 20px; /* distância do rodapé da imagem */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px; /* espaço entre as bolinhas */
+  z-index: 2; /* acima do overlay da imagem */
+}
+
+.manual-btn {
+  border: 2px solid var(--secoesoucontornos);
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.manual-btn:hover {
+  background-color: var(--secoesoucontornos);
+}
+
+.manual-btn:not(:last-child)
+{
+  margin-right: 40px;
+}
+.manual-btn:hover{
+  background-color: white;
+}
+#radio1:checked ~ .first{
+  margin-left : 0;
+}
+#radio2:checked ~ .first{
+  margin-left : -25%;
+}
+#radio3:checked ~ .first{
+  margin-left : -50%;
+}
+#radio4:checked ~ .first{
+  margin-left : -75%;
+}
+
+.navigation-auto {
+  border-radius:1px solid var(--corsecundaria);
+  position: absolute;
+  bottom: 20px; /* mesma altura das bolinhas manuais */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+.navigation-auto div {
+  border: 2px solid var(--corsecundaria);
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background-color: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background-color: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background-color: white;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background-color: white;
+}
+/*Texto dos Slides*/
+.slide {
+  position: relative;
+}
+
+.slide-text {
+  position: absolute;
+  color: white;
+  top: 10%;
+ 
+  
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+.slide-text h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 4.0rem;
+  color: var(--corprincipal);
+}
+.slide-text h2 {
+  margin-bottom:8px;
+  font-weight: 700;
+  font-size: 2.1rem;
+}
+.slide-text h2 span {
+  color: var(--corsecundaria);
+  position: 
+  relative;
+  padding: 2px 0;
+}
+.slide-text h2 span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--corsecundaria);
+  bottom: 2px; /* Ajuste a posição conforme necessário */
+  left: 0;
+}
+.TextoTrasparente {
+  background: rgba(0, 0, 0, 0.6); /* fundo escuro com transparência */
+  color: white;
+  padding: 30px 20px;
+  border-radius: 50px;
+  font-size: 22px;
+  text-align: center;
+  max-width: 700px;
+  margin:0 auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  box-shadow: 0 0 15px rgba(102, 102, 102, 0.4);
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; /* acima do texto da imagem */
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  line-height: 1.5;
+  transition: all 0.3s ease;
+
+}
+.TextoTrasparente .verde {
+  color: var(--CorWhatsapp);
+  font-weight: 600;
+}
+div.TextoTrasparente p {
+  margin: 0, auto;
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 20px; /* Adiciona espaçamento interno */
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+div.bnt-contato2 button{
+  position: absolute;
+  left: 50%;
+  top: 570px;
+  transform: translateX(-50%);
+  z-index: 3; /* acima do texto da imagem */
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  border-radius:20px ;
+  font-weight: bolder;
+  border: none;
+  background-color: var(--CorWhatsapp);
+  color: white;
+}
+div.bnt-contato2 button:hover{
+  background-image: linear-gradient(to , #69be88,#11853b);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transform: translateX(-50%) scale(1.05);
+  transition: all 0.3s ease;
+}
